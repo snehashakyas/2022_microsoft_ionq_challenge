@@ -39,6 +39,14 @@ class QuantumTetris:
 		self.blocks = [Block()]  # start with one block already on the board
 		self.upcoming_blocks = []
 		self.points = 0
+		
+		# have the board start with a bunch of blocks already there
+		number_of_initial_blocks = 10
+		while len(self.upcoming_blocks) < number_of_initial_blocks:
+			print('Creating new block')
+			self.upcoming_blocks.append(Block(position=np.array([np.random.randint(1, 6),18])))
+		while len(self.blocks) < number_of_initial_blocks:
+			self.update()
 	
 	def handle_gate_action(self, gate):
 		# apply quantum gate, and check to make sure no overlap
@@ -63,10 +71,8 @@ class QuantumTetris:
 		elif gate == 'h':
 			if current_block.number_of_qubits == 1:
 				state_vector[:] = gates.H.dot(state_vector)
-			elif current_block.number_of_qubits == 2:
-				state_vector[:] = np.kron(gates.H, np.eye(2)).dot(state_vector)
 			else:
-				raise Exception('Wrong number of qubits')
+				print('Ignoring H gate on 2 qubit block')
 		elif gate == 'cx':
 			state_vector[:] = gates.CX.dot(state_vector)
 		elif gate == 'cz':

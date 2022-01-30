@@ -33,7 +33,7 @@ def main():
     boardHeight = 20
     boardWidth = 10
 
-    difficulty = .4  # Lower is harder
+    difficulty = .7  # Lower is harder
 
     main_board = Board(boardWidth, boardHeight,
                        initial_square_size,
@@ -73,6 +73,12 @@ def main():
                 elif event.key == pygame.K_z:
                     print('Gate z')
                     main_board.game_state.handle_gate_action('z')
+                elif event.key == pygame.K_a:
+                    print('Gate cz')
+                    main_board.game_state.handle_gate_action('cz')
+                elif event.key == pygame.K_s:
+                    print('Gate cx')
+                    main_board.game_state.handle_gate_action('cx')
                 elif event.key == pygame.K_h:
                     print('Gate h')
                     main_board.game_state.handle_gate_action('h')
@@ -401,9 +407,9 @@ class Board:
                 else:
                     relx += 2
                 '''
-            for pos in block.covered_squares():
-                gameDisplay.blit(self.green_cell, (self.hor_offset+self.square_hor*((pos[0])),
-                                                   self.ver_offset+self.square_ver*(self.boardHeight-(pos[1]+1)), self.square_hor*self.rescale[1]//2, -self.square_ver*self.rescale[0]//2))
+            #for pos in block.covered_squares():
+            #    gameDisplay.blit(self.green_cell, (self.hor_offset+self.square_hor*((pos[0])),
+            #                                       self.ver_offset+self.square_ver*(self.boardHeight-(pos[1]+1)), self.square_hor*self.rescale[1]//2, -self.square_ver*self.rescale[0]//2))
 
     def draw_buttons(self, gameDisplay):
         # X button

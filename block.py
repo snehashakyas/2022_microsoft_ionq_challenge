@@ -20,7 +20,7 @@ def get_orientation_of_single_qubit(qubit):
 
 
 class Block:
-	def __init__(self, number_of_qubits=None, state_vector=None):
+	def __init__(self, number_of_qubits=None, state_vector=None, position=None):
 		if number_of_qubits is None:
 			number_of_qubits = np.random.choice([1,2])
 		self.number_of_qubits = number_of_qubits
@@ -42,7 +42,11 @@ class Block:
 					self.state_vector = np.kron(eighth_rotation, np.eye(2)).dot(self.state_vector)
 			else:
 				raise NotImplementedError('Only 1 and 2 qubit blocks are supported')
-		self.position = np.array([5, 19])
+		if position is None:
+			self.position = np.array([5, 19])
+		else:
+			assert type(position) == np.ndarray, 'Position needs to be numpy array to do vector math on it'
+			self.position = position
 	
 	def covered_squares(self):
 		if self.number_of_qubits == 1:
