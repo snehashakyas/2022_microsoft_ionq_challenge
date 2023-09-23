@@ -1,7 +1,9 @@
 # Quantum Tetris
 
 Developed for MIT IQUHACK 2022 
+
 Group name: Quantris
+
 Group members: `Caspian Chaharom, Danai Bili, Frederik Hardervig, Sneha Shakya, Tomasz Kazulak`
 
 For the MIT iQuHACK Hackathon, the team's task was a 26 hour Microsoft and IonQ joint challenge to use a quantum computer to build a game. Thus the team developed this Quantum Tetris game that introduces quantum concepts, such as destructive interference, through a familiar-inspired game of Tetris.
