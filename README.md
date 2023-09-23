@@ -21,7 +21,7 @@ The arrow directions seen on the qubit bit blocks in Fig. 2 represent its quantu
 There are two types of qubit blocks:
 
 * Single qubit blocks:
-  * The The arrows represent the quantum state of the qubit. The `|0>` basis is the x-axis and the `|1>` basis vector is the y-axis. So a Hadamard gate applied to `|0>` would make `1/√2 (|0>+|1>)` which would be an arrow pointing in the up-right direction 
+  * The arrows represent the quantum state of the qubit. The `|0>` basis is the x-axis and the `|1>` basis vector is the y-axis. So a Hadamard gate applied to `|0>` would make `1/√2 (|0>+|1>)` which would be an arrow pointing in the up-right direction 
   * You can use the arrow keys 'x', 'z', and 'h' to control the rotation of the single qubit blocks. This will respectively apply the pauli `x` and `z` gates and Hadamard `h` gates.
 
 * Two qubit blocks:
