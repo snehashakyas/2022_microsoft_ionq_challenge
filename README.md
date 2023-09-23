@@ -1,15 +1,22 @@
 # Quantum Tetris
 
 Developed for MIT IQUHACK 2022 
+Group name: Quantris
+Group members: `Caspian Chaharom, Danai Bili, Frederik Hardervig, Sneha Shakya, Tomasz Kazulak`
 
-Presented by QuanTris: `Caspian Chaharom, Danai Bili, Frederik Hardervig, Sneha Shakya, Tomasz Kazulak`
+For the MIT iQuHACK Hackathon, the team's task was a 26 hour Microsoft and IonQ joint challenge to use a quantum computer to build a game. Thus the team developed this Quantum Tetris game that introduces quantum concepts, such as destructive interference, through a familiar-inspired game of Tetris.
+
+Awardees of the "Creativity Hack Award" for MIT IQUHACK 2022, 
 
 ## Game Rules and Goal
 
-In this game your blocks are Qubits, and you must make them destructively interfere to get rid of them.
+Quantim Tetris is designed to teach quantum concepts in a fun and interactive manner. It is inspired by the familiar game of Tetris. 
+
+In this game, your Tetris blocks are Qubits, and you must make them destructively interfere to get rid of them. 
+
 There are two types of blocks:
 * Single qubit blocks:
-  * The arrows represent the quantum state of the qubit. The `|0>` basis is the x-axis and teh `|1>` basis vector is the y-axis. So a Hadamard gate applied to `|0>` would make `1/√2 (|0>+|1>)` which would be an arrow pointing in the up-right direction 
+  * The arrows represent the quantum state of the qubit. The `|0>` basis is the x-axis and the `|1>` basis vector is the y-axis. So a Hadamard gate applied to `|0>` would make `1/√2 (|0>+|1>)` which would be an arrow pointing in the up-right direction 
   * You can apply the pauli `x` and `z` gates and Hadamard `h` gate by clicking the buttons or pressing the keys on the keyboard
   * The goal of the game is to have the blocks disappear using destructive interference
 * Two qubit blocks:
