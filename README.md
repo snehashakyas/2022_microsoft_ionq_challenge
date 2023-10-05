@@ -21,12 +21,12 @@ The arrow directions seen on the qubit bit blocks in Fig. 2 represent its quantu
 There are two types of qubit blocks:
 
 * Single qubit blocks:
-  * The arrows represent the quantum state of the qubit. The `|0>` basis is the x-axis and the `|1>` basis vector is the y-axis. So a Hadamard gate applied to `|0>` would make `1/√2 (|0>+|1>)` which would be an arrow pointing in the up-right direction 
+  * The arrows represent the quantum state of the qubit. The `|0>` basis is the x-axis and the `|1>` basis vector is the y-axis. A Hadamard gate applied to `|0>` mathematically creates `1/√2 (|0>+|1>)`, which would be an arrow pointing in the up-right direction. This arrow direction would be used to add or "destroy" blocks on the game screen.
   * You can use the arrow keys 'x', 'z', and 'h' to control the rotation of the single qubit blocks. This will respectively apply the pauli `x` and `z` gates and Hadamard `h` gates.
 
 * Two qubit blocks:
-  * Some blocks have two qubits. The single qubit gates operate on the first qubit
-  * There are also two two-qubit gates, the controlled x `CX` and controlled z `CZ`, which you can apply by clicking the buttons on the screen, or pressing the keys `a` and `s`, which are directly above their single qubit counterparts on the keyboard
+  * Some blocks have two qubits. The single qubit gates operate to interfere their single qubit counterparts.
+  * There are also two two-qubit gates -- the `CX` gate and `CZ` gate. You can activate these gates by pressing the keys `a` and `s`, which are directly above their single qubit counterparts on the keyboard
 
 
 The goal of the game is to have the blocks disappear using destructive interference. Difficulty of the game can be increased or decreased to speed up or slow down the speed of the falling qubits respectively.
